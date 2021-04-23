@@ -18,17 +18,17 @@ $color-mint: #A3E1C2;
 
 body{
     font-family: 'Poppins', sans-serif;
-    font-size: 14px;
 }
 
 nav{
+    font-size: 12px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 30px 20px;
 
     .logo{
-        height: 35px;
+        height: 30px;
     }
 
     .menu-mid{
@@ -38,16 +38,19 @@ nav{
             list-style: none;
 
             .new{
-                
+                display: flex;
+                align-items: center;
 
-                span{
-                    text-transform: uppercase;
-                    font-size: 10px;
-                    background-color: $color-mint;
-                    padding: 1px 6px;
-                    border-radius: 10px;
-                    margin-top: -10px;
-                }
+            }
+
+            .new-span{
+                display: inline-block;
+                text-transform: uppercase;
+                font-size: 9px;
+                background-color: $color-mint;
+                padding: 1px 6px;
+                border-radius: 10px;
+                margin-left: 5px;
             }
         }
 
@@ -85,7 +88,14 @@ nav{
             border-radius: 30px;
         }
             
-        }
+        }    
+}
+
+main{
+    .book-container{
+        width: 200px;
+        background-color: #fff;
+    }
 
     
 }
