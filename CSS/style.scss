@@ -95,6 +95,32 @@ main{
     .book-container{
         width: 200px;
         background-color: #fff;
+
+        h3{
+            font-size: 16px;
+        }
+        
+
+        .book-link{
+            font-size: 13px;
+            color: $color-black;
+            text-decoration: none;
+
+            div {
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-between;
+    
+                .book-time{
+                    font-size: 9px;
+                }
+
+            }
+
+            .book-description{
+                font-size: 8px;
+            }
+        }
     }
 
     
