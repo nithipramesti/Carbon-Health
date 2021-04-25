@@ -98,18 +98,28 @@ nav .menu-right .button-black {
 }
 
 main .book-container {
-  width: 200px;
+  font-weight: 500;
+  width: 310px;
   background-color: #fff;
+  padding: 25px 15px;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 5px 15px 5px rgba(51, 51, 51, 0.12);
+          box-shadow: 0 5px 15px 5px rgba(51, 51, 51, 0.12);
 }
 
 main .book-container h3 {
-  font-size: 16px;
+  font-size: 20px;
+  font-weight: inherit;
+  margin-bottom: 15px;
 }
 
 main .book-container .book-link {
-  font-size: 13px;
+  display: block;
+  position: relative;
+  font-size: 15px;
   color: #1a1a1a;
   text-decoration: none;
+  padding: 14px 10px 14px 30px;
 }
 
 main .book-container .book-link div {
@@ -124,11 +134,72 @@ main .book-container .book-link div {
           justify-content: space-between;
 }
 
+main .book-container .book-link div .book-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .book-container .book-link div .book-title::before {
+  display: inline-block;
+  position: absolute;
+  left: 10px;
+  content: '';
+  height: 9px;
+  width: 9px;
+  border-radius: 50%;
+  border: 2px #A3E1C2 solid;
+  background: rgba(163, 225, 194, 0);
+  margin-right: 8px;
+}
+
+main .book-container .book-link div .book-urgent::before {
+  border: 2px #EFD254 solid;
+}
+
+main .book-container .book-link div .book-primary::before {
+  border: 2px #57B3CA solid;
+}
+
 main .book-container .book-link div .book-time {
-  font-size: 9px;
+  font-size: 10px;
+  color: #59B68F;
+  padding: 2px 7px;
+  border-radius: 15px;
+}
+
+main .book-container .book-link div .book-highlight {
+  background-color: #D1F0E0;
 }
 
 main .book-container .book-link .book-description {
-  font-size: 8px;
+  color: #A1A3A3;
+  font-size: 10px;
+  display: block;
+}
+
+main .book-container .book-link:hover {
+  background: #F9F9F9;
+}
+
+main .book-container button {
+  display: block;
+  background-color: #1a1a1a;
+  font-family: inherit;
+  font-weight: inherit;
+  border: none;
+  border-radius: 30px;
+  margin: 20px auto 0;
+}
+
+main .book-container button a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+  padding: 13px 20px;
 }
 /*# sourceMappingURL=style.css.map */
