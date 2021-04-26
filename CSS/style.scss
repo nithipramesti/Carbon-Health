@@ -23,17 +23,19 @@ $color-blue: #57B3CA;
 
 body{
     font-family: 'Poppins', sans-serif;
+    color: $color-black;
 }
 
 nav{
-    font-size: 12px;
+    font-size: 13px;
+    font-weight: 500;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 30px 20px;
+    margin: 30px 30px;
 
     .logo{
-        height: 30px;
+        height: 35px;
     }
 
     .menu-mid{
@@ -52,8 +54,9 @@ nav{
                 display: inline-block;
                 text-transform: uppercase;
                 font-size: 9px;
+                font-weight: 600;
                 background-color: $color-mint;
-                padding: 1px 6px;
+                padding: 2px 6px;
                 border-radius: 10px;
                 margin-left: 5px;
             }
@@ -97,16 +100,37 @@ nav{
 }
 
 main{
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 150px;
+
+    .main-left{
+        
+        h1{
+            font-size: 42px;
+            font-weight: 500;
+            line-height: 55px;
+            margin-bottom: 10px;
+        }
+
+        p{
+            font-size: 21px;
+            font-weight: 400;
+            margin-bottom: 50px;
+        }
+    }
+
     .book-container{
+        right: 120px;
         font-weight: 500;
-        width: 310px;
+        width: 350px;
         background-color: #fff;
-        padding: 25px 15px;
-        border-radius: 15px;
+        padding: 45px 20px 35px 20px;
+        border-radius: 30px;
         box-shadow: 0 5px 15px 5px rgba(51, 51, 51, 0.12);
 
         h3{
-            font-size: 20px;
+            font-size: 22px;
             font-weight: inherit;
             margin-bottom: 15px;
         }
@@ -115,10 +139,11 @@ main{
         .book-link{
             display: block;
             position: relative;
-            font-size: 15px;
+            font-size: 16px;
             color: $color-black;
             text-decoration: none;
-            padding: 14px 10px 14px 30px;
+            border-radius: 10px;
+            padding: 18px 10px 18px 30px;
 
             div {
                 display: flex;
@@ -128,6 +153,7 @@ main{
                 .book-title{
                     display: flex;
                     align-items: center;
+                    margin-bottom: 3px;
                 }
 
                 .book-title::before{
@@ -152,7 +178,7 @@ main{
                 }
     
                 .book-time{
-                    font-size: 10px;
+                    font-size: 11px;
                     color: $color-mint-dark;
                     padding: 2px 7px;
                     border-radius: 15px;
@@ -166,7 +192,7 @@ main{
 
             .book-description{
                 color: $color-gray;
-                font-size: 10px;
+                font-size: 11px;
                 display: block;
             }
         }
@@ -185,14 +211,16 @@ main{
             font-weight: inherit;
             border: none;
             border-radius: 30px;
-            margin: 20px auto 0;
+            margin: 15px auto 0;
 
             a{
                 display: inline-block;
                 color: #fff;
                 text-decoration: none;
-                font-size: 12px;
-                padding: 13px 20px;
+                font-size: 14px;
+                font-weight: 500;
+                letter-spacing: 0.2px;
+                padding: 14px 22px;
             }
 
         }
