@@ -26,6 +26,14 @@ body{
     color: $color-black;
 }
 
+.book-description{
+    color: $color-gray;
+    font-size: 11px;
+    display: block;
+}
+
+
+//NAVIGATION
 nav{
     font-size: 13px;
     font-weight: 500;
@@ -38,17 +46,21 @@ nav{
         height: 35px;
     }
 
+    li{
+        padding-bottom: 10px;
+        transform: translateY(10px);
+    }
+
     .menu-mid{
         display: flex;
 
+        .new-container{
+            display: flex;
+            align-items: center;
+        }
+
         li{
             list-style: none;
-
-            .new{
-                display: flex;
-                align-items: center;
-
-            }
 
             .new-span{
                 display: inline-block;
@@ -62,14 +74,56 @@ nav{
             }
         }
 
+
         li+li{
-        margin-left: 40px;
+        margin-left: 50px;
         }
 
         a{
             text-decoration: none;
             color: $color-black;
             
+        }
+
+        #services{
+            display: none;
+            position: relative;
+            cursor: pointer;
+
+            .icon-expand{
+                width: 10px;
+                margin-left: 8px;
+            }
+
+            .menu-expand-container{
+                display: none;
+                transform:translate(-35%, 8px);
+                padding: 30px 20px;
+                background-color: $color-gray-light;
+                border-radius: 0 0 20px 20px;
+                
+                li{
+                    margin: 0 auto;
+
+                    .book-description{
+                        display: block;
+                    }
+
+                    a{
+                        white-space: nowrap;
+                    }
+                }
+
+                li+li{
+                    margin-top: 20px;
+                }
+            }
+        }
+
+        #services:hover{
+            .menu-expand-container{
+                display: block;
+            }
         }
     }
 
@@ -81,7 +135,7 @@ nav{
         }
 
         li+li{
-        margin-left: 20px;
+        margin-left: 30px;
         }
 
         a{
@@ -94,17 +148,40 @@ nav{
             background-color: $color-black;
             padding: 15px 25px;
             border-radius: 30px;
+            white-space: nowrap;
         }
             
         }    
 }
 
+@media (max-width: 75em) {
+    nav {
+        .menu-mid{
+            .menu-expand-hidden{
+                display: none;
+            }
+
+            #services{
+                display: block;
+            }
+
+            .menu-expand-container{
+                position: absolute;
+            }
+        }
+    }
+}
+
+
+
+//MAIN
 main{
     display: flex;
     justify-content: space-between;
     padding: 100px 150px;
 
     .main-left{
+        margin-right: 100px;
         
         h1{
             font-size: 42px;
@@ -118,12 +195,23 @@ main{
             font-weight: 400;
             margin-bottom: 50px;
         }
+
+        a{
+            color: $color-black;
+
+            span{
+                display: inline-block;
+                transform: rotate(90deg);
+                font-size: 18px;
+                margin-left: 5px;
+            }
+        }
     }
 
     .book-container{
         right: 120px;
         font-weight: 500;
-        width: 350px;
+        min-width: 350px;
         background-color: #fff;
         padding: 45px 20px 35px 20px;
         border-radius: 30px;
@@ -190,11 +278,6 @@ main{
 
             }
 
-            .book-description{
-                color: $color-gray;
-                font-size: 11px;
-                display: block;
-            }
         }
 
         .book-link:hover{
@@ -212,6 +295,7 @@ main{
             border: none;
             border-radius: 30px;
             margin: 15px auto 0;
+            white-space: nowrap;
 
             a{
                 display: inline-block;
@@ -227,4 +311,33 @@ main{
     }
 
     
+}
+
+@media (max-width: 75em) {
+    main{
+        display: block;
+        padding: 150px 130px;
+
+        .main-left{
+            margin-bottom: 120px;
+            margin-right: 0;
+
+            h1{
+                font-size: 55px;
+                line-height: 65px;
+                margin-bottom: 30px;
+            }
+
+            p{
+                font-size: 25px;
+                margin-bottom: 50px;
+            }
+
+        }
+
+        .book-container{
+            width: 450px;
+            margin: 80px auto;
+        }
+    }
 }

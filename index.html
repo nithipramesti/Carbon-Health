@@ -14,9 +14,17 @@
         <img class="logo" src="/Images/Logo.png" alt="Carbon Health logo">
         <ul class="menu-mid">
             <li><a href="#">Locations</a></li>
-            <li><a href="#">Primary Care</a></li>
-            <li><a href="#">Urgent Care</a></li>
-            <li><a class="new" href="#"><span>Wellness 360</span> <span class="new-span">new</span></a></li>
+            <li id="services">Services <img class="icon-expand" src="/Images/down-arrow.png" alt="expand icon">
+                <ul class="menu-expand-container">
+                    <li><a href="#">Primary Care <span class="book-description">Ideal for immediate medical attention</span></a></li>
+                    <li><a href="#">Urgent Care <span class="book-description">Ideal for wellness and preverentive care</span></a></li>
+                    <li><a class="new-container" href="#"><span>Wellness 360 </span> <span class="new-span">new</span></a> <span class="book-description">An in-depth look at your health</span></li>
+                </ul>
+            </li>
+            <li class="menu-expand-hidden"><a href="#">Primary Care</a></li>
+            <li class="menu-expand-hidden"><a href="#">Urgent Care</a></li>
+            <li class="menu-expand-hidden"><a class="new-container" href="#"><span>Wellness 360</span> <span class="new-span">new</span></a></li>
+            <li><a href="#">Pricing</a></li>
         </ul>
         <ul class="menu-right">
             <li><a class="button-black" href="#">Book Appointment</a></li>
@@ -31,22 +39,22 @@
             <p>
                 Book same day appointment instantly.
             </p>
-            <a href="#">Learn more</a>
+            <a href="#">Learn more <span>&#10141</span></a>
         </div>
 
         <div class="book-container">
             <h3>Book an appointment</h3>
             <a href="#" class="book-link">
                 <div><span class="book-title book-urgent">Urgent Care</span> <span class="book-time">Next today at 2pm</span></div>
-                <span class="book-description">Ideal for wellness and preverentive care</span>
+                <span class="book-description">Ideal for immediate medical attention</span>
             </a>
             <a href="#" class="book-link">
                 <div><span class="book-title book-primary">Primary Care</span> <span class="book-time">Next tomorrow at 8am</span></div>
                 <span class="book-description">Ideal for wellness and preverentive care</span>
             </a>
             <a href="#" class="book-link">
-                <div><span class="book-title book-virtual">Virtual Care</span> <span class="book-time book-highlight">Instant</span></div>
-                <span class="book-description">Ideal for wellness and preverentive care</span>
+                <div><span class="book-title book-wellness">Wellness 360</span> <span class="book-time book-highlight">Instant</span></div>
+                <span class="book-description">An in-depth look at your health</span>
             </a>
 
             <button>
@@ -54,5 +62,7 @@
             </button>
         </div>
     </main>
+    
+    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
