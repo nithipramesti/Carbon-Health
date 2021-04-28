@@ -122,10 +122,6 @@ nav .menu-mid #services .menu-expand-container li + li {
   margin-top: 20px;
 }
 
-nav .menu-mid #services:hover .menu-expand-container {
-  display: block;
-}
-
 nav .menu-right {
   display: -webkit-box;
   display: -ms-flexbox;
