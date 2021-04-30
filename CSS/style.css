@@ -58,13 +58,19 @@ nav li {
           transform: translateY(10px);
 }
 
-nav .menu-mid {
+nav .menu-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-nav .menu-mid .new-container {
+nav .menu-container .menu-mid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav .menu-container .menu-mid .new-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -73,11 +79,11 @@ nav .menu-mid .new-container {
           align-items: center;
 }
 
-nav .menu-mid li {
+nav .menu-container .menu-mid li {
   list-style: none;
 }
 
-nav .menu-mid li .new-span {
+nav .menu-container .menu-mid li .new-span {
   display: inline-block;
   text-transform: uppercase;
   font-size: 9px;
@@ -88,27 +94,27 @@ nav .menu-mid li .new-span {
   margin-left: 5px;
 }
 
-nav .menu-mid li + li {
+nav .menu-container .menu-mid li + li {
   margin-left: 50px;
 }
 
-nav .menu-mid a {
+nav .menu-container .menu-mid a {
   text-decoration: none;
   color: #1a1a1a;
 }
 
-nav .menu-mid #services {
+nav .menu-container .menu-mid #services {
   display: none;
   position: relative;
   cursor: pointer;
 }
 
-nav .menu-mid #services .icon-expand {
+nav .menu-container .menu-mid #services .icon-expand {
   width: 10px;
   margin-left: 8px;
 }
 
-nav .menu-mid #services .menu-expand-container {
+nav .menu-container .menu-mid #services .menu-expand-container {
   display: none;
   -webkit-transform: translate(-35%, 8px);
           transform: translate(-35%, 8px);
@@ -117,42 +123,42 @@ nav .menu-mid #services .menu-expand-container {
   border-radius: 0 0 20px 20px;
 }
 
-nav .menu-mid #services .menu-expand-container li {
+nav .menu-container .menu-mid #services .menu-expand-container li {
   margin: 0 auto;
 }
 
-nav .menu-mid #services .menu-expand-container li .book-description {
+nav .menu-container .menu-mid #services .menu-expand-container li .book-description {
   display: block;
 }
 
-nav .menu-mid #services .menu-expand-container li a {
+nav .menu-container .menu-mid #services .menu-expand-container li a {
   white-space: nowrap;
 }
 
-nav .menu-mid #services .menu-expand-container li + li {
+nav .menu-container .menu-mid #services .menu-expand-container li + li {
   margin-top: 20px;
 }
 
-nav .menu-right {
+nav .menu-container .menu-right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-nav .menu-right li {
+nav .menu-container .menu-right li {
   list-style: none;
 }
 
-nav .menu-right li + li {
+nav .menu-container .menu-right li + li {
   margin-left: 30px;
 }
 
-nav .menu-right a {
+nav .menu-container .menu-right a {
   text-decoration: none;
   color: #1a1a1a;
 }
 
-nav .menu-right .button-black {
+nav .menu-container .menu-right .button-black {
   color: #fff;
   background-color: #1a1a1a;
   padding: 15px 25px;
@@ -161,14 +167,18 @@ nav .menu-right .button-black {
 }
 
 @media (max-width: 75em) {
-  nav .menu-mid .menu-expand-hidden {
+  nav .menu-container .menu-mid .menu-expand-hidden {
     display: none;
   }
-  nav .menu-mid #services {
+  nav .menu-container .menu-mid #services {
     display: block;
   }
-  nav .menu-mid .menu-expand-container {
+  nav .menu-container .menu-mid #services .menu-expand-container {
+    display: none;
     position: absolute;
+  }
+  nav .menu-container .menu-mid #services:hover .menu-expand-container {
+    display: block;
   }
 }
 
@@ -189,11 +199,20 @@ nav .menu-right .button-black {
     display: block;
     height: 45px;
   }
-  nav .menu-mid {
+  nav .menu-container .menu-mid {
+    display: block;
+  }
+  nav .menu-container .menu-mid li + li {
+    margin: 0;
+  }
+  nav .menu-container .menu-mid #services {
     display: none;
   }
-  nav .menu-right {
-    display: none;
+  nav .menu-container .menu-mid .menu-expand-hidden {
+    display: block;
+  }
+  nav .menu-container .menu-right {
+    display: block;
   }
 }
 

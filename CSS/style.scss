@@ -60,122 +60,131 @@ nav{
         transform: translateY(10px);
     }
 
-    .menu-mid{
+    .menu-container {
         display: flex;
 
-        .new-container{
+        .menu-mid{
             display: flex;
-            align-items: center;
-        }
-
-        li{
-            list-style: none;
-
-            .new-span{
-                display: inline-block;
-                text-transform: uppercase;
-                font-size: 9px;
-                font-weight: 600;
-                background-color: $color-mint;
-                padding: 2px 6px;
-                border-radius: 10px;
-                margin-left: 5px;
+    
+            .new-container{
+                display: flex;
+                align-items: center;
             }
-        }
-
-
-        li+li{
-        margin-left: 50px;
-        }
-
-        a{
-            text-decoration: none;
-            color: $color-black;
-            
-        }
-
-        #services{
-            display: none;
-            position: relative;
-            cursor: pointer;
-
-            .icon-expand{
-                width: 10px;
-                margin-left: 8px;
+    
+            li{
+                list-style: none;
+    
+                .new-span{
+                    display: inline-block;
+                    text-transform: uppercase;
+                    font-size: 9px;
+                    font-weight: 600;
+                    background-color: $color-mint;
+                    padding: 2px 6px;
+                    border-radius: 10px;
+                    margin-left: 5px;
+                }
             }
-
-            .menu-expand-container{
-                display: none;
-                transform:translate(-35%, 8px);
-                padding: 30px 20px;
-                background-color: $color-gray-light;
-                border-radius: 0 0 20px 20px;
+    
+    
+            li+li{
+            margin-left: 50px;
+            }
+    
+            a{
+                text-decoration: none;
+                color: $color-black;
                 
-                li{
-                    margin: 0 auto;
-
-                    .book-description{
-                        display: block;
-                    }
-
-                    a{
-                        white-space: nowrap;
-                    }
+            }
+    
+            #services{
+                display: none;
+                position: relative;
+                cursor: pointer;
+    
+                .icon-expand{
+                    width: 10px;
+                    margin-left: 8px;
                 }
-
-                li+li{
-                    margin-top: 20px;
+    
+                .menu-expand-container{
+                    display: none;
+                    transform:translate(-35%, 8px);
+                    padding: 30px 20px;
+                    background-color: $color-gray-light;
+                    border-radius: 0 0 20px 20px;
+                    
+                    li{
+                        margin: 0 auto;
+    
+                        .book-description{
+                            display: block;
+                        }
+    
+                        a{
+                            white-space: nowrap;
+                        }
+                    }
+    
+                    li+li{
+                        margin-top: 20px;
+                    }
                 }
             }
+    
         }
-
-        // #services:hover{
-        //     .menu-expand-container{
-        //         display: block;
-        //     }
-        // }
-    }
-
-    .menu-right{
-        display: flex;
-
-        li{
-            list-style: none;
-        }
-
-        li+li{
-        margin-left: 30px;
-        }
-
-        a{
-            text-decoration: none;
-            color: $color-black;
-        }
-
-        .button-black{
-            color: #fff;
-            background-color: $color-black;
-            padding: 15px 25px;
-            border-radius: 30px;
-            white-space: nowrap;
-        }
-            
-        }    
+    
+        .menu-right{
+            display: flex;
+    
+            li{
+                list-style: none;
+            }
+    
+            li+li{
+            margin-left: 30px;
+            }
+    
+            a{
+                text-decoration: none;
+                color: $color-black;
+            }
+    
+            .button-black{
+                color: #fff;
+                background-color: $color-black;
+                padding: 15px 25px;
+                border-radius: 30px;
+                white-space: nowrap;
+            }
+                
+        }  
+    }  
 }
 
 @media (max-width: 75em) {
     nav {
-        .menu-mid{
-            .menu-expand-hidden{
-                display: none;
-            }
+        .menu-container{
+            .menu-mid{
+                .menu-expand-hidden{
+                    display: none;
+                }
+    
+                #services{
+                    display: block;
 
-            #services{
-                display: block;
-            }
+                    .menu-expand-container{
+                        display: none;
+                        position: absolute;
+                    }
+                }
 
-            .menu-expand-container{
-                position: absolute;
+                #services:hover{
+                    .menu-expand-container{
+                        display: block;
+                }
+            }
+    
             }
         }
     }
@@ -198,13 +207,26 @@ nav{
             }
         }
         
-        .menu-mid{
-            display: none;
-            
-        }
-
-        .menu-right{
-            display: none;
+        .menu-container{
+            .menu-mid{
+                display: block;
+    
+                li+li {
+                    margin: 0;
+                }
+                
+                #services {
+                    display: none;
+                }
+    
+                .menu-expand-hidden{
+                    display: block;
+                }
+            }
+    
+            .menu-right{
+                display: block;
+            }
         }
     }
 }
