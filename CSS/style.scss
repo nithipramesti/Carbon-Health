@@ -165,7 +165,7 @@ nav{
 @media (max-width: 75em) {
     nav {
         .menu-container{
-            .menu-mid{
+            .menu-mid {
                 .menu-expand-hidden{
                     display: none;
                 }
@@ -181,9 +181,9 @@ nav{
 
                 #services:hover{
                     .menu-expand-container{
-                        display: block;
+                        display: block; //NOT WORKING BECAUSE JS
+                    }
                 }
-            }
     
             }
         }

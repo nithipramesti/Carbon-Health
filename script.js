@@ -11,17 +11,18 @@ menuExpandCont.style.display = 'none';
     // }
 // })
 
-// (function() {
-//     menuServices.addEventListener("click", expandMenu, false);
-//     menuServices.addEventListener("mouseover", expandMenu, false);
-// })();
+(function() {
+    menuServices.addEventListener("click", expandMenu, false);
+    // menuServices.addEventListener("mouseover", expandMenu, false);
+    // menuExpandCont.addEventListener("mouseover", expandMenu, false);
+})();
 
-// function expandMenu(e){
-//     // e.preventDefault();
+function expandMenu(e){
+    // e.preventDefault();
 
-//     if(menuExpandCont.style.display === 'none') {
-//         menuExpandCont.style.display = 'block';
-//     } else {
-//         menuExpandCont.style.display = 'none';
-//     }
-// }
+    if(menuExpandCont.style.display === 'none') {
+        menuExpandCont.style.display = 'block';
+    } else {
+        menuExpandCont.style.display = 'none';
+    }
+}
