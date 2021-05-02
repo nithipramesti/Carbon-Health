@@ -197,7 +197,29 @@ nav .menu-container .menu-right .button-black {
   }
   nav .menu-img .menu-icon {
     display: block;
+    background: no-repeat url("/Images/menu-mobile.png");
+    background-size: contain;
     height: 45px;
+    width: 45px;
+    z-index: 100;
+  }
+  nav .menu-img .close-icon {
+    display: block;
+    background: no-repeat url("/Images/close.png");
+    background-size: contain;
+    height: 45px;
+    width: 45px;
+    z-index: 100;
+  }
+  nav .menu-container {
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
   }
   nav .menu-container .menu-mid {
     display: block;
@@ -213,6 +235,12 @@ nav .menu-container .menu-right .button-black {
   }
   nav .menu-container .menu-right {
     display: block;
+  }
+  nav .menu-container .menu-right li + li {
+    margin: 0;
+  }
+  nav .menu-container .menu-right .button-black {
+    display: none;
   }
 }
 

@@ -203,11 +203,31 @@ nav{
 
             .menu-icon{
                 display: block;
+                background: no-repeat url("/Images/menu-mobile.png");
+                background-size: contain;
                 height: 45px;
+                width: 45px;
+                z-index: 100;
+            }
+
+            .close-icon{
+                display: block;
+                background: no-repeat url("/Images/close.png");
+                background-size: contain;
+                height: 45px;
+                width: 45px;
+                z-index: 100;
             }
         }
         
         .menu-container{
+            display: none;
+            flex-direction: column-reverse;
+            position: absolute;
+            background-color: #fff;
+            width: 100%;
+            // height: 100vh;
+
             .menu-mid{
                 display: block;
     
@@ -226,6 +246,14 @@ nav{
     
             .menu-right{
                 display: block;
+
+                li+li {
+                    margin: 0;
+                }
+
+                .button-black{
+                    display: none;
+                }
             }
         }
     }
