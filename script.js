@@ -3,11 +3,9 @@ const menuServices = document.querySelector('#services');
 const menuExpandCont = document.querySelector('.menu-expand-container');
 const menuContainer = document.querySelector('.menu-container');
 const menuMobile = document.querySelector('.menu-mobile')
-// const menuIcon = document.querySelector('.menu-icon');
-// const closeIcon = document.querySelector('.close-icon');
 
-menuExpandCont.style.display = 'none';
-menuContainer.style.display = 'none';
+// menuExpandCont.style.display = 'none';
+// menuContainer.style.display = 'none';
 
 menuServices.addEventListener('click', function(){
     if(menuExpandCont.style.display === 'none') {
